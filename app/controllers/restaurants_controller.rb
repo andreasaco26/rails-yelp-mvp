@@ -5,16 +5,16 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
   end
-
-  # GET /restaurants/1
-  def show
-    @restaurant = Restaurant.find(id_params)
-  end
-
-  # GET /restaurants/new
+    # GET /restaurants/new
   def new
     @restaurant = Restaurant.new
   end
+  # GET /restaurants/1
+  def show
+    @review = Review.new
+  end
+
+
 
   # GET /restaurants/1/edit
   def edit

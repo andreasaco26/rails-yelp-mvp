@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row pt-4">
+    <div class="col-sm-6">
+      <h2>Create a Restaurant</h2>
+      <div class="mt-4 mb-4">
+        <%= simple_form_for(@restaurant) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :phone_number %>
+          <%= f.input :category %>
+
+         <%= f.submit 'Add Restaurant', class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <hr/>
+      <%= link_to '<i class="fa-regular fa-arrow-left"></i> Back to list'.html_safe, restaurants_path, :class => "text-decoration-none" %>
+    </div>
+  </div>
+</div>

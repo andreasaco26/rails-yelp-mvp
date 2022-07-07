@@ -1,0 +1,13 @@
+<div class="container pt-4">
+  <h1>Restaurants</h1>
+  <ul class="list-unstyled py-2">
+    <% @restaurants.each do |restaurant| %>
+      <li class="pb-1">
+
+        <%= link_to restaurant.name, restaurant_path(restaurant), :class => "text-decoration-none"%>
+      </li>
+    <% end %>
+  </ul>
+  <hr/>
+  <%= link_to '<i class="fa-regular fa-plus"></i> Add a Restaurant'.html_safe, restaurants_new_path, :class => "text-decoration-none" %>
+</div>
